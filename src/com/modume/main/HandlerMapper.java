@@ -22,9 +22,9 @@ public class HandlerMapper {
 		if (uriArr == null) {
 			return errorController.error(request, "400 요청 오류", "페이지를 찾을 수 없습니다.", "경로를 다시 확인해 주십시오.");
 		}
-		switch (uriArr[1]) {
+		switch (uriArr[2]) {
 		case ViewRef.URI_USER:
-			switch (uriArr[2]) {
+			switch (uriArr[3]) {
 		case "login":
 			return userController.login(request);
 		case "loginProc":
@@ -37,12 +37,10 @@ public class HandlerMapper {
 				return userController.joinProc(request);
 			case "chkIdProc":
 				return userController.ajaxIdChk(request);
-			case "youtube":
-				return userController.youtube(request);
 			}
 			break;
 		case ViewRef.URI_BOARD:
-			switch (uriArr[2]) {
+			switch (uriArr[3]) {
 			case "all":
 				return boardController.mainView(request);
 			}

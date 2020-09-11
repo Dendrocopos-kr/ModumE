@@ -42,16 +42,16 @@ public class UserController {
 		
 		switch (service.login(param)) {
 		case 0:
-			return "redirect:/user/login?Err="+"2";
+			return "redirect:/ModumE/user/login?Err="+"2";
 		case 1:
 			HttpSession hs = request.getSession();
 			hs.setAttribute(Const.LOGIN_USER, param);
-			return "redirect:/restaurant/restMap";
+			return "redirect:/ModumE/board/all";
 		case 2:
-			return "redirect:/user/login?Err="+"3";
+			return "redirect:/ModumE/user/login?Err="+"3";
 		}
 		
-		return "redirect:/user/login";
+		return "redirect:/ModumE/user/login";
 	}
 	
 	public String join(HttpServletRequest request) {
@@ -73,7 +73,7 @@ public class UserController {
 
 		service.join(param);
 
-		return "redirect:/user/login";
+		return "redirect:/ModumE/user/login";
 	}
 
 	public String ajaxIdChk(HttpServletRequest request) {
@@ -88,12 +88,7 @@ public class UserController {
 
 	public String logout(HttpServletRequest request) {
 		request.getSession().invalidate();
-		return "redirect:/user/login";
+		return "redirect:/ModumE/user/login";
 	}
 
-	public String youtube(HttpServletRequest request) {
-		request.setAttribute(Const.VIEW, "/youtube/youtube");
-		request.setAttribute(Const.TITLE, "youtube test");		
-		return ViewRef.TEMP_DEFAULT;
-	}
 }

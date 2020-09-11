@@ -32,6 +32,7 @@ public class Container extends HttpServlet {
 
 	private void proc(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		System.out.println(request.getRequestURI());
 		String[] uriArr = request.getRequestURI().split("/");
 		String temp = mapper.nav(request,uriArr);
 

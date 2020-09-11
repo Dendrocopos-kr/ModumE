@@ -25,14 +25,14 @@
 				</div>
 				<div id="headerNm">${login_user.nm}님환영합니다.</div>
 				<div class="btn">
-					<a href="/user/logout">
+					<a href="/ModumE/user/logout">
 						<button id="logout" type="button">로그아웃</button>
 					</a>
 				</div>
 			</div>
 			<div class="headerRight btn">
-				<a href="/restaurant/reg"><button>등록</button></a> 
-				<a href="/user/favorite"><button>찜</button></a>
+				<a href="/ModumE/"><button>등록</button></a> 
+				<a href="/user/"><button>찜</button></a>
 			</div>
 		</header>
 		<div id="menubar">
