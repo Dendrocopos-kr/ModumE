@@ -10,6 +10,7 @@ public class HandlerMapper {
 	private UserController userController;
 	private ErrorController errorController;
 	private BoardController boardController;
+	private MainController mainController;
 
 	public HandlerMapper() {
 		super();
@@ -25,10 +26,10 @@ public class HandlerMapper {
 		switch (uriArr[2]) {
 		case ViewRef.URI_USER:
 			switch (uriArr[3]) {
-		case "login":
-			return userController.login(request);
-		case "loginProc":
-			return userController.loginProc(request);
+			case "login":
+				return userController.login(request);
+			case "loginProc":
+				return userController.loginProc(request);
 			case "logout":
 				return userController.logout(request);
 			case "join":
@@ -45,6 +46,8 @@ public class HandlerMapper {
 				return boardController.mainView(request);
 			}
 			break;
+		default:
+			return mainController.defaultView(request);
 		}
 
 		return errorController.error(request, "404 요청 오류", "페이지를 찾을 수 없습니다.", "경로를 다시 확인해 주십시오.");

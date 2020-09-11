@@ -14,9 +14,8 @@ public class BoardController {
 	}
 
 	public String mainView(HttpServletRequest request) {
-		request.setAttribute(Const.VIEW, "/modume/main");
-		request.setAttribute(Const.TITLE, "ModumE!");		
+		request.setAttribute(Const.VIEW, "/modume/board");
+		request.setAttribute(Const.TITLE, "ModumE! - board");
 		return ViewRef.TEMP_TYPE_1;
 	}
-
 }
