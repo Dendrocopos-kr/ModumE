@@ -3,8 +3,8 @@ package com.modume.main.user;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.modume.main.Const;
 import com.modume.main.ViewRef;
+import com.modume.main.utils.Const;
 import com.modume.main.vo.UserVO;
 
 public class UserController {

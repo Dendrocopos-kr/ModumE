@@ -9,15 +9,15 @@
 <title>${title}</title>
 </head>
 <body>
-	<div id="containerGird">
+	<div id="container">
 		<header id="header">
+			<jsp:include page="/WEB-INF/view/${topView}.jsp"></jsp:include>
 		</header>
-		<div id="menubar">
-		</div>
 		<section id="container">
 			<jsp:include page="/WEB-INF/view/${view}.jsp"></jsp:include>
 		</section>
 		<footer id="footer">
+			<jsp:include page="/WEB-INF/view/${bottomView}.jsp"></jsp:include>
 		</footer>
 	</div>
 </body>

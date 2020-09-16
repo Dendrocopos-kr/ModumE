@@ -19,13 +19,17 @@ public class HandlerMapper {
 		boardController = new BoardController();
 	}
 
-	public String nav(HttpServletRequest request, String[] uriArr) {
-		if (uriArr == null) {
+	public String nav(HttpServletRequest request) {
+
+		System.out.println(request.getRequestURI());
+		String[] uriArr = request.getRequestURI().split("/");
+		
+		if (uriArr == null || uriArr.length < 3) {
 			return errorController.error(request, "400 요청 오류", "페이지를 찾을 수 없습니다.", "경로를 다시 확인해 주십시오.");
 		}
-		switch (uriArr[2]) {
+		switch (uriArr[1]) {
 		case ViewRef.URI_USER:
-			switch (uriArr[3]) {
+			switch (uriArr[2]) {
 			case "login":
 				return userController.login(request);
 			case "loginProc":
@@ -41,13 +45,17 @@ public class HandlerMapper {
 			}
 			break;
 		case ViewRef.URI_BOARD:
-			switch (uriArr[3]) {
-			case "all":
-				return boardController.mainView(request);
+			switch (uriArr[2]) {
+			case "main":
+				return boardController.main(request);
+			case "stream":
+				return boardController.stream(request);
+			case "search":
+				return boardController.search(request);
+			case "my":
+				return boardController.my(request);
 			}
 			break;
-		default:
-			return mainController.defaultView(request);
 		}
 
 		return errorController.error(request, "404 요청 오류", "페이지를 찾을 수 없습니다.", "경로를 다시 확인해 주십시오.");

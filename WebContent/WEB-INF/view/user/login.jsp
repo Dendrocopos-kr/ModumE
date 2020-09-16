@@ -2,7 +2,7 @@
 <div id="sectionContainerCenter">
 	<div>
 		<div class="err">${Err}</div>
-		<form class="frm" id="frm" action="/ModumE/user/loginProc" method="post">
+		<form class="frm" id="frm" action="/user/loginProc" method="post">
 			<div>
 				<label>아이디</label><input type="text" name="user_id" placeholder="아이디" required>
 			</div>
@@ -14,7 +14,7 @@
 			</div>
 		</form>
 		<div>
-			<a class="btn" href="/ModumE/user/join"><button>회원가입 화면으로</button></a>
+			<a class="btn" href="/user/join"><button>회원가입 화면으로</button></a>
 		</div>
 	</div>
 </div>

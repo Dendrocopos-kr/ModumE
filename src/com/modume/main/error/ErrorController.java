@@ -2,8 +2,8 @@ package com.modume.main.error;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.modume.main.Const;
 import com.modume.main.ViewRef;
+import com.modume.main.utils.Const;
 
 public class ErrorController {
 	public String error(HttpServletRequest request,String errCode, String errMsg, String errDes) {

@@ -1,4 +1,4 @@
-package com.modume.main;
+package com.modume.main.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

@@ -1,4 +1,4 @@
-package com.modume.main;
+package com.modume.main.utils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

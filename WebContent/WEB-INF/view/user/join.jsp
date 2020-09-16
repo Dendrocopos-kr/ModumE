@@ -3,7 +3,7 @@
 <div id="sectionContainerCenter">
 	<div>
 		<div class="err">${Err}</div>
-		<form class="frm" id="frm" action="/ModumE/user/joinProc" method="post" onsubmit="return chk()">
+		<form class="frm" id="frm" action="/user/joinProc" method="post" onsubmit="return chk()">
 		<div id="idChkResult" class="msg"></div>
 			<div>
 				<label>아이디</label><input type="text" name="user_id" placeholder="아이디" value="${tempData.getUser_id()}" required>
@@ -23,7 +23,7 @@
 			</div>
 		</form>
 		<div>
-			<a class="btn" href="/ModumE/user/login"><button>로그인 화면으로</button></a>
+			<a class="btn" href="/user/signIn"><button>로그인 화면으로</button></a>
 		</div>
 	</div>
 </div>
@@ -38,7 +38,7 @@ function chkId(){
 		return;
 	}
 	
-	axios.get('/ModumE/user/chkIdProc',{
+	axios.get('/user/chkIdProc',{
 		params:{
 			user_id
 			}

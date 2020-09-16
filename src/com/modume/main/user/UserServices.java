@@ -1,6 +1,6 @@
 package com.modume.main.user;
 
-import com.modume.main.SecurityUtils;
+import com.modume.main.utils.SecurityUtils;
 import com.modume.main.vo.UserVO;
 
 public class UserServices {
